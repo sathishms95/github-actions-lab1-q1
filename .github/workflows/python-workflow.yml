@@ -8,16 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up Python 3.11
-      run : sudo apt-get install python3-pip
-
 
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: 3.11
 
+    - name: Set up Python 3.11
+      run : sudo apt-get install python3-pip
+
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
+
 
